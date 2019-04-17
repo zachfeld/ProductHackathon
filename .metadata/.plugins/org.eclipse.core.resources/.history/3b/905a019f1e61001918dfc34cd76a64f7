@@ -1,0 +1,28 @@
+package application;
+
+public class Stoplight {
+	
+	private String id;
+	private String status;
+	private int[] timer = new int[3];
+	private String direction;
+	
+	
+	public Stoplight(String id, int[] timer, String direction){
+		this.id = id;
+		this.status = "Green";
+		this.timer = timer;
+		this.direction = direction;
+	}
+	
+	
+	public void setStatus(String status){
+		this.status = status;
+	}
+	
+	
+	public void setTimer(int[] timer){
+		this.timer = timer;
+	}
+	
+}

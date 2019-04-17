@@ -1,0 +1,9 @@
+package application;
+
+
+public class Testing {
+
+	public static void main (String args[]){
+		Stoplight A = new Stoplight("1001", [60,40,30], null);
+	}
+}
