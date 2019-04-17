@@ -1,0 +1,57 @@
+package application;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class Intersection {
+
+	private String name;
+	private Intersection[] adjacents;
+	private Stoplight[] stoplights;
+	
+	public Intersection(String name, Stoplight[] stoplights){
+		this.name = name;
+		this.adjacents = new Intersection[]{};
+		this.stoplights = stoplights;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Intersection[] getAdjacents() {
+		return adjacents;
+	}
+
+	public void setAdjacents(Intersection[] adjacents) {
+		this.adjacents = adjacents;
+	}
+
+	public Stoplight[] getStoplights() {
+		return stoplights;
+	}
+
+	public void setStoplights(Stoplight[] stoplights) {
+		this.stoplights = stoplights;
+	}
+	
+	public String[] getAdjacentNames(){
+		String[] adjacentNames = new String[adjacents.length];
+		for (int i = 0; i< adjacents.length; i++){
+			adjacentNames[i] = adjacents[i].getName();
+		}
+		return adjacentNames;
+	}
+
+	@Override
+	public String toString() {
+		return "Intersection [name=" + name + ", adjacents=" + toString(this.getAdjacentNames()) + ", stoplights="
+				+ Arrays.toString(stoplights) + "]";
+	}
+	
+	
+}

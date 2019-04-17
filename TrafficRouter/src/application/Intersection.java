@@ -1,5 +1,6 @@
 package application;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Intersection {
@@ -37,11 +38,28 @@ public class Intersection {
 	public void setStoplights(Stoplight[] stoplights) {
 		this.stoplights = stoplights;
 	}
+	
+	public String[] getStoplightIDs(){
+		String[] stoplightIDs = new String[stoplights.length];
+		for (int i = 0; i< stoplights.length; i++){
+			stoplightIDs[i] = stoplights[i].getId();
+		}
+		return stoplightIDs;
+		
+	}
+	
+	public String[] getAdjacentNames(){
+		String[] adjacentNames = new String[adjacents.length];
+		for (int i = 0; i< adjacents.length; i++){
+			adjacentNames[i] = adjacents[i].getName();
+		}
+		return adjacentNames;
+	}
 
 	@Override
 	public String toString() {
-		return "Intersection [name=" + name + ", adjacents=" + Arrays.toString(adjacents) + ", stoplights="
-				+ Arrays.toString(stoplights) + "]";
+		return "Intersection [name=" + name + ", adjacents=" + Arrays.toString(this.getAdjacentNames()) + ", stoplights="
+				+ Arrays.toString(this.getStoplightIDs()) + "]";
 	}
 	
 	
