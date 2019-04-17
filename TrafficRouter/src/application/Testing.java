@@ -27,5 +27,6 @@ public class Testing {
 		Route R6 = new Route(I4, I1, 1.1, 2.20);
 		
 		
+		System.out.println(R1);
 	}
 }

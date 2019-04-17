@@ -46,7 +46,7 @@ public class Route {
 
 	@Override
 	public String toString() {
-		return "Route [start=" + start + ", end=" + end + ", distance=" + distance + ", optimalSpeed=" + optimalSpeed
+		return "Route [start=" + start.getName() + ", end=" + end.getName() + ", distance=" + distance + ", optimalSpeed=" + optimalSpeed
 				+ ", traffic=" + traffic + "]";
 	}
 	
