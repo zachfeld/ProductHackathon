@@ -8,9 +8,9 @@ public class Intersection {
 	private Intersection[] adjacents;
 	private Stoplight[] stoplights;
 	
-	public Intersection(String name, Intersection[] adjacents, Stoplight[] stoplights){
+	public Intersection(String name, Stoplight[] stoplights){
 		this.name = name;
-		this.adjacents = adjacents;
+		this.adjacents = new Intersection[]{};
 		this.stoplights = stoplights;
 	}
 
