@@ -41,7 +41,7 @@ public class Path {
 			intersections.add(route.getStart());
 		}
 		// add end intersection of last route
-		intersections.add(routes[routes.length-1].getEnd());
+		intersections.add(routes[routes.length].getEnd());
 		return intersections;
 	}
 	
@@ -57,7 +57,7 @@ public class Path {
 
 	@Override
 	public String toString() {
-		return "Path [routes=" + Arrays.toString(routes) + "]";
+		return "Path [routes=" + this.getIntersections + "]";
 	}
 	
 

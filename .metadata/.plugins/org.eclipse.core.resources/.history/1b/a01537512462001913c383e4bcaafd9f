@@ -57,7 +57,7 @@ public class Path {
 
 	@Override
 	public String toString() {
-		return "Path [routes=" + Arrays.toString(routes) + "]";
+		return "Path [routes=" + this.getIntersections() + "]";
 	}
 	
 

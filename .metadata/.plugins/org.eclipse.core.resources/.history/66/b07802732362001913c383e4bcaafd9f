@@ -26,11 +26,8 @@ public class Testing {
 		Route R5 = new Route(I1, I4, 1.1, 2.20);
 		Route R6 = new Route(I4, I1, 1.1, 2.20);
 		
-		Route[] routes = {R1, R2, R3};
-		
 		Path P1 = new Path(new Route[]{R1, R2, R3, R4, R5});
-		Path P2 = new Path(routes);
 		
-		System.out.println(P2.getCurrentSpeed());
+		System.out.println(P1);
 	}
 }
